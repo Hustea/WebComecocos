@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  padding: 10px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+#citySelector {
+  margin-top: 8px;
+  padding: 6px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+#map {
+  flex: 1;
+}
+
+#quizContainer {
+  background: white;
+  padding: 16px;
+  border-top: 1px solid #ddd;
+}
+
+#quizContainer h2 {
+  margin: 0 0 8px;
+}
+
+#optionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#optionsContainer button {
+  flex: 1 1 calc(50% - 10px);
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#optionsContainer button:hover {
+  background-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}

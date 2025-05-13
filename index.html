@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pueblos Quiz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <h1>Pueblos Quiz</h1>
+    <select id="citySelector">
+      <option value="Javea">Xàbia</option>
+      <option value="Gandia">Gandía</option>
+    </select>
+  </header>
+
+  <div id="map"></div>
+
+  <div id="quizContainer" class="hidden">
+    <h2 id="pointTitle"></h2>
+    <p id="questionText"></p>
+    <div id="optionsContainer"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
