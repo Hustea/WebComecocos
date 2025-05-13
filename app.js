@@ -32,17 +32,23 @@ function showQuestion(point) {
     optionsContainer.innerHTML = "";
 
     question.options.forEach((opt, index) => {
-      const btn = document.createElement("button");
-      btn.textContent = opt;
-      btn.onclick = () => {
-        if (index === question.answer) {
-          btn.style.backgroundColor = "#b6f7b6";
-        } else {
-          btn.style.backgroundColor = "#f8c0c0";
-        }
-      };
-      optionsContainer.appendChild(btn);
-    });
+  const btn = document.createElement("button");
+  btn.textContent = opt;
+
+  btn.onclick = () => {
+    // Desactivar todos los botones después de la primera respuesta
+    const allButtons = optionsContainer.querySelectorAll("button");
+    allButtons.forEach(b => b.disabled = true);
+
+    if (index === question.answer) {
+      btn.style.backgroundColor = "#b6f7b6";
+    } else {
+      btn.style.backgroundColor = "#f8c0c0";
+    }
+  };
+
+  optionsContainer.appendChild(btn);
+});
   }
 }
 
