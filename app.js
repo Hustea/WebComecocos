@@ -10,7 +10,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 function loadCity(city) {
-  fetch(`https://raw.githubusercontent.com/Hustea/CiudadesJson/blob/main/Javea.json`)
+  fetch(`https://raw.githubusercontent.com/Hustea/CiudadesJson/main/${city}.json`)
     .then(res => res.json())
     .then(data => {
       map.setView([data.cityCenter.lat, data.cityCenter.lng], 15);
