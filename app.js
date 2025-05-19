@@ -26,7 +26,7 @@ function loadCity(city) {
   quizContainer.classList.add("hidden");
   respondedPoints.clear();  // Opcional: borrar respuestas al cambiar ciudad si quieres
 
-  fetch(`https://raw.githubusercontent.com/Hustea/CiudadesJson/${city}.json`)
+  fetch(`https://raw.githubusercontent.com/Hustea/CiudadesJson/main/${city}.json`)
     .then(res => res.json())
     .then(data => {
       map.setView([data.cityCenter.lat, data.cityCenter.lng], 15);
